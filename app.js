@@ -32,18 +32,4 @@ cameraTrigger.onclick = function() {
 };
 
 // Start the video stream when the window loads
-window.addEventListener("load", cameraStart, false);
-
-navigator.getWebcam({
-//            audio: true,      // I keep this part of the code, but since we do not need audio, I kept it only as a comment, to reduce permissions asked by the website.
-            video: true
-        },
-        function (stream) {
-            //Display the video stream in the video object
-        },
-        function () {
-            logError("your web cam is not accessible. If you do not have a webcam, you can use a mirror instead to see yourself signing.");
-        });
-}
-
-
+window.addEventListener("load", cameraStart, true);
