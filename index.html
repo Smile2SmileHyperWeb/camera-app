@@ -9,27 +9,26 @@
 
 		<!-- Link to main style sheet -->
 		<link rel="stylesheet" href="style.css"> 
+		<script src="app.js"></script>
 	</head>
-	<body>
+	<body><div class="display-cover">
+    <video autoplay></video>
+    <canvas class="d-none"></canvas>
 
-		<!-- Camera -->
-		<main id="camera">
+    <div class="video-options">
+        <select name="" id="" class="custom-select">
+            <option value="">Select camera</option>
+        </select>
+    </div>
 
-		    <!-- Camera sensor -->
-		    <canvas id="camera--sensor"></canvas>
-		    
-		    <!-- Camera view -->
-		    <video id="camera--view" autoplay playsinline></video>
-		    
-		    <!-- Camera output -->
-		    <img src="//:0" alt="" id="camera--output">
+    <img class="screenshot-image d-none" alt="">
 
-		    <!-- Camera trigger -->
-		    <button id="camera--trigger">Take a picture</button>
+    <div class="controls">
+        <button class="btn btn-danger play" title="Play"><i data-feather="play-circle"></i></button>
+        <button class="btn btn-info pause d-none" title="Pause"><i data-feather="pause"></i></button>
+        <button class="btn btn-outline-success screenshot d-none" title="ScreenShot"><i data-feather="image"></i></button>
+    </div>
+</div>
 
-		</main>
-
-		<!-- Reference to your JavaScript file -->
-		<script src="app.js"></script> 
-	</body>
+</body>
 </html>
